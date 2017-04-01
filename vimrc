@@ -1,56 +1,81 @@
-let mapleader=","       " leader is comma
-execute pathogen#infect()
-syntax enable
-set background=dark
-colorscheme base16-default-dark
+call pathogen#infect()
 
+" Indentation
 set tabstop=2
 set shiftwidth=2
-set softtabstop=2   " number of spaces in tab when editing
-set expandtab       " tabs are spaces
+set softtabstop=2
+set textwidth=120
+set colorcolumn=81
+set expandtab
 
-set number              " show line numbers
+" Enncoding
+set encoding=utf-8
+set termencoding=utf-8
+set fileencodings=utf-8,cp1251,koi8-r,latin1
+
+set number
 set relativenumber
-set showcmd             " show command in bottom bar
-filetype indent on      " load filetype-specific indent files
+set showcmd
+filetype indent on
 
-set wildmenu            " visual autocomplete for command menu
-set lazyredraw          " redraw only when we need to.
+set wildmenu
+set lazyredraw
+set noerrorbells
 
-set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
+" Searching
+set incsearch
+set hlsearch
 
-" turn off search highlight
+let mapleader=","       " leader is comma
 nnoremap <leader><space> :nohlsearch<CR>
 
-set foldenable          " enable folding
-set foldlevelstart=10   " open most folds by default
-set foldnestmax=10      " 10 nested fold max
-
-"  za - open/close folds
-set foldmethod=indent   " fold based on indent level 
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
 
 set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupdir=~/.vim-backup
+set directory=~/.vim-tmp
 set writebackup
 
-" Tab navigation like Firefox.
-nnoremap <C-S-tab> :tabprevious<CR>
-nnoremap <C-tab>   :tabnext<CR>
-nnoremap <C-t>     :tabnew<CR>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab>   <Esc>:tabnext<CR>i
-inoremap <C-t>     <Esc>:tabnew<CR>
+" Create directories, if required.
+if !isdirectory(expand("$HOME/.vim-backup"))
+	call mkdir(expand("$HOME/.vim-backup"), "p", 0700)
+endif
+if !isdirectory(expand("$HOME/.vim-tmp"))
+	call mkdir(expand("$HOME/.vim-tmp"), "p", 0700)
+endif
 
+" Look & feel
+
+" Colors
+syntax enable
+set background=dark
+colorscheme base16-default-dark
+
+" Status line
+set laststatus=2
+set statusline=
+set statusline+=%-3.3n\                    " Buffer number
+set statusline+=%f\                        " File name
+set statusline+=%h%m%r%w                   " Flags (help, modified, read-only, preview)
+set statusline+=\[                         " Opening bracket
+set statusline+=%{strlen(&ft)?&ft:'none'}, " File type
+set statusline+=%{&encoding},              " Encoding
+set statusline+=%{&fileformat}             " File format
+set statusline+=\]\                        " Closing bracket
+set statusline+=%=                         " Right align
+set statusline+=%b\ /\ 0x%04B              " Current character (decimal / hexadecimal)
+set statusline+=\ \ \ \                    " Padding
+set statusline+=%-14.(%l,%c%V%)\ %<%P      " Offset
+
+" PLUGINS CONFIGS
+
+" Nerd tree
 map <C-n> :NERDTreeToggle<CR>
+
+" CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX"
-
-inoremap <S-Tab> <C-V><Tab>
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
