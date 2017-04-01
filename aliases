@@ -1,0 +1,9 @@
+alias o="nautilus"
+alias zv="vim ~/.vimrc"
+alias zp="vim ~/.profile"
+alias fuck="fc -lnr | head -n1 | xargs sudo"
+# java
+alias javac9="${HOME}/Projects/openjdk9/build/linux-x86_64-normal-server-slowdebug/images/jdk/bin/javac"
+alias javap9="${HOME}/Projects/openjdk9/build/linux-x86_64-normal-server-slowdebug/images/jdk/bin/javap"
+alias java9="${HOME}/Projects/openjdk9/build/linux-x86_64-normal-server-slowdebug/images/jdk/bin/java"
+alias jdb9="${HOME}/Projects/openjdk9/build/linux-x86_64-normal-server-slowdebug/images/jdk/bin/jdb"
