@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat $1 | openssl aes-256-cbc -d | tar xz
