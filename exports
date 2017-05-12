@@ -1,4 +1,6 @@
 [[ -z "$TMPDIR" ]] && export TMP_DIR=/var/tmp
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 function add_to_path() {
     [[ -d "$*" ]] && PATH="$*:$PATH"
