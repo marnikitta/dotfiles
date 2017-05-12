@@ -50,7 +50,7 @@ endif
 
 " Colors
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 
 " Status line
