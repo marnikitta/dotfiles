@@ -51,7 +51,7 @@ endif
 " Colors
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme base16-default-dark
 
 " Status line
 set laststatus=2

@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# Restarts wifi after suspend
-# Ubuntu bag
-
-sudo systemctl restart network-manager.service

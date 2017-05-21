@@ -1,0 +1,11 @@
+decrypt() {
+  [[ -e $1 ]] && cat $1 | openssl aes-256-cbc -d | tar -xz || echo 'No such file'
+}
+
+encrypt() {
+  [[ -e $1 ]] && tar -cz $1 | openssl aes-256-cbc > $2 || echo 'No such file'
+}
+
+conf-jdk() {
+  bash ./configure --with-debug-level=slowdebug  --with-native-debug-symbols=external
+}

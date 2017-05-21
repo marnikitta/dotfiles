@@ -1,19 +1,23 @@
-# COLORS
 alias ls="ls --color=auto"
 alias dir="dir --color=auto"
-alias vdir="vdir --color=auto"
 
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
+
+alias mv='mv -i'
+alias cp='cp -i'
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 alias ra="ranger"
 alias o="nautilus"
 alias zv="vim ~/.vimrc"
 alias zp="vim ~/.profile"
 alias fuck="fc -lnr | head -n1 | xargs sudo"
-# java
-alias javac9="${HOME}/Projects/openjdk9/build/linux-x86_64-normal-server-slowdebug/images/jdk/bin/javac"
-alias javap9="${HOME}/Projects/openjdk9/build/linux-x86_64-normal-server-slowdebug/images/jdk/bin/javap"
-alias java9="${HOME}/Projects/openjdk9/build/linux-x86_64-normal-server-slowdebug/images/jdk/bin/java"
-alias jdb9="${HOME}/Projects/openjdk9/build/linux-x86_64-normal-server-slowdebug/images/jdk/bin/jdb"
+alias se="sudoedit"
+alias enc="cat $1 | openssl aes-256-cbc -d | tar xz"
+
+alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
+

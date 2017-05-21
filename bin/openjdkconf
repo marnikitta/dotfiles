@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-bash ./configure --with-debug-level=slowdebug  --with-native-debug-symbols=external

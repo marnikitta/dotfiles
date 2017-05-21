@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-for item in $HOME/.{aliases,exports}; do
+for item in $HOME/.{aliases,exports,functions}; do
   [ -f "$item" ] && \
   source "$item"
 done

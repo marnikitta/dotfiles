@@ -1,0 +1,21 @@
+#!/bin/bash
+
+sudo apt install \
+vim \
+arc-theme \
+curl \
+htop \
+netcat-traditional \
+mercurial \
+openjdk-8-jdk \
+openjdk-8-source \
+openjfx \
+maven \
+ranger \
+xinput \
+calibre \
+python-pip \
+python3-pip \
+xclip \
+tcpdump \
+strace
