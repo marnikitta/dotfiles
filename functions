@@ -6,6 +6,10 @@ encrypt() {
   [[ -e $1 ]] && tar -cz $1 | openssl aes-256-cbc > $2 || echo 'No such file'
 }
 
-conf-jdk() {
-  bash ./configure --with-debug-level=slowdebug  --with-native-debug-symbols=external
+jdk-configure() {
+  bash ./configure --disable-warnings-as-errors --with-extra-cxxflags='-Wno-error -std=gnu++98 -fno-delete-null-pointer-checks -fno-lifetime-dse -fpermissive' --with-extra-cflags='-Wno-error -std=gnu++98 -fno-delete-null-pointer-checks -fno-lifetime-dse' --with-debug-level=slowdebug 
+}
+
+jdk-make() {
+  make WARNINGS_ARE_ERRORS="-Wno-error" CFLAGS_WARNINGS_ARE_ERRORS="-Wno-error" all
 }
