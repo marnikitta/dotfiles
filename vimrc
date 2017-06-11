@@ -8,6 +8,9 @@ set textwidth=120
 set colorcolumn=81
 set expandtab
 
+" Automatically :write before running commands
+set autowrite
+
 " Enncoding
 set encoding=utf-8
 set termencoding=utf-8
@@ -22,6 +25,10 @@ set wildmenu
 set lazyredraw
 set noerrorbells
 
+" Nice spliting
+set splitbelow
+set splitright
+
 " Searching
 set incsearch
 set hlsearch
@@ -33,25 +40,17 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
 
-set backup
-set backupdir=~/.vim-backup
-set directory=~/.vim-tmp
-set writebackup
-
-" Create directories, if required.
-if !isdirectory(expand("$HOME/.vim-backup"))
-	call mkdir(expand("$HOME/.vim-backup"), "p", 0700)
-endif
-if !isdirectory(expand("$HOME/.vim-tmp"))
-	call mkdir(expand("$HOME/.vim-tmp"), "p", 0700)
-endif
+" Disable backup
+set nobackup
+set nowritebackup
+set noswapfile
 
 " Look & feel
 
 " Colors
 syntax enable
 set background=dark
-colorscheme base16-default-dark
+colorscheme solarized
 
 " Status line
 set laststatus=2
