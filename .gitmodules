@@ -19,3 +19,6 @@
 [submodule "vim/bundle/vim-gas"]
 	path = vim/bundle/vim-gas
 	url = git@github.com:Shirk/vim-gas.git
+[submodule "vim/bundle/jellybeans.vim"]
+	path = vim/bundle/jellybeans.vim
+	url = git@github.com:nanotech/jellybeans.vim.git
