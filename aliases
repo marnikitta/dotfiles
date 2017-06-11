@@ -17,7 +17,6 @@ alias zv="vim ~/.vimrc"
 alias zp="vim ~/.profile"
 alias fuck="fc -lnr | head -n1 | xargs sudo"
 alias se="sudoedit"
-alias enc="cat $1 | openssl aes-256-cbc -d | tar xz"
 
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 
