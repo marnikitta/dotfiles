@@ -1,8 +1,6 @@
 set visualbell
 set noerrorbells
 
-set number
-set relativenumber
 set showcmd
 
 " Searching
@@ -11,7 +9,3 @@ set hlsearch
 
 let mapleader=","       " leader is comma
 nnoremap <leader><space> :nohlsearch<CR>
-
-" move vertically by visual line
-nnoremap j gj
-nnoremap k gk
