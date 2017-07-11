@@ -1,8 +1,15 @@
 #!/bin/bash
 
-sudo apt install \
+sudo apt update -y
+
+sudo apt install -y \
+gtypist \
+ca-certificates \
+apt-transport-https \
+software-properties-common \
 vim \
-arc-theme \
+zsh \
+tmux \
 curl \
 htop \
 netcat-traditional \
