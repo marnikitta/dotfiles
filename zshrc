@@ -1,5 +1,3 @@
-export TERM="xterm-256color"
-
 export DISABLE_AUTO_UPDATE="true"
 export ZSH=${HOME}/.oh-my-zsh
 export ZSH_THEME="bira"
