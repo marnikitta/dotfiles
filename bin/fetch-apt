@@ -1,28 +1,33 @@
 #!/bin/bash
 
-sudo apt update -y
+sudo apt-get update -y
 
-sudo apt install -y \
-gtypist \
-ca-certificates \
-apt-transport-https \
-software-properties-common \
-vim \
-zsh \
-tmux \
-curl \
-htop \
-netcat-traditional \
-mercurial \
-openjdk-8-jdk \
-openjdk-8-source \
-openjfx \
-maven \
-ranger \
-xinput \
-calibre \
-python-pip \
-python3-pip \
-xclip \
-tcpdump \
-strace
+sudo apt-get install -y \
+  dnsutils \
+  gtypist \
+  ca-certificates \
+  apt-transport-https \
+  software-properties-common \
+  vim \
+  zsh \
+  tmux \
+  curl \
+  htop \
+  netcat-traditional \
+  mercurial \
+  openjdk-8-jdk \
+  openjdk-8-source \
+  openjfx \
+  maven \
+  ranger \
+  xinput \
+  calibre \
+  python-pip \
+  python3-pip \
+  xclip \
+  tcpdump \
+  strace \
+  geany \
+  nmap
+
+
