@@ -1,24 +1,24 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
-	url = git@github.com:robbyrussell/oh-my-zsh.git
+	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "vim/bundle/base16-vim"]
 	path = vim/bundle/base16-vim
-	url = git@github.com:chriskempson/base16-vim.git
+	url = https://github.com/chriskempson/base16-vim.git
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
-	url = git@github.com:kien/ctrlp.vim.git
+	url = https://github.com/kien/ctrlp.vim.git
 [submodule "vim/bundle/delimitMate"]
 	path = vim/bundle/delimitMate
-	url = git@github.com:Raimondi/delimitMate.git
+	url = https://github.com/Raimondi/delimitMate.git
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
-	url = git@github.com:altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/vim-gas"]
 	path = vim/bundle/vim-gas
-	url = git@github.com:Shirk/vim-gas.git
+	url = https://github.com/Shirk/vim-gas.git
 [submodule "vim/bundle/jellybeans.vim"]
 	path = vim/bundle/jellybeans.vim
-	url = git@github.com:nanotech/jellybeans.vim.git
+	url = https://github.com/nanotech/jellybeans.vim.git
