@@ -28,6 +28,8 @@ sudo apt-get install -y \
   tcpdump \
   strace \
   geany \
-  nmap
+  nmap \
+  ctags \
+  cscope
 
 
