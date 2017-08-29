@@ -30,6 +30,7 @@ sudo apt-get install -y \
   geany \
   nmap \
   ctags \
-  cscope
+  cscope \
+  qemu-system
 
 
