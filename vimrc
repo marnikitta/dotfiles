@@ -1,4 +1,5 @@
 call pathogen#infect()
+nnoremap <M-n> :CtrlPTag<cr>
 
 " Indentation
 set tabstop=2
@@ -71,9 +72,10 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P      " Offset
 " PLUGINS CONFIGS
 
 " Nerd tree
-map <C-n> :NERDTreeToggle<CR>
+map <c-n> :NERDTreeToggle<CR>
 
 " CtrlP
+nnoremap <leader>p :CtrlPTag<cr>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'

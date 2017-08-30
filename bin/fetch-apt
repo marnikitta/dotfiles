@@ -9,6 +9,7 @@ sudo apt-get install -y \
   apt-transport-https \
   software-properties-common \
   vim \
+  openvpn \
   zsh \
   tmux \
   curl \
@@ -28,6 +29,11 @@ sudo apt-get install -y \
   tcpdump \
   strace \
   geany \
-  nmap
-
-
+  nmap \
+  linux-tool \
+  bucklespring \
+  ansible \
+  visualvm \
+  sysstat \
+  qemu-system \
+  iperf
