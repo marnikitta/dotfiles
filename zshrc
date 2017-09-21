@@ -1,6 +1,6 @@
 export DISABLE_AUTO_UPDATE="true"
 export ZSH=${HOME}/.oh-my-zsh
-export ZSH_THEME="bira"
+export ZSH_THEME="random"
 
 plugins=(git)
 

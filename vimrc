@@ -50,7 +50,7 @@ set noswapfile
 
 " Colors
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 
 " Status line
@@ -77,6 +77,6 @@ map <c-n> :NERDTreeToggle<CR>
 " CtrlP
 nnoremap <leader>p :CtrlPTag<cr>
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
