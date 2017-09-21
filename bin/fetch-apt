@@ -38,4 +38,7 @@ sudo apt-get install -y \
   qemu-system \
   iperf \
   ctags \
-  cscope
+  cscope \
+  cowsay \
+  lolcat \
+  sl
