@@ -5,7 +5,6 @@ nnoremap <M-n> :CtrlPTag<cr>
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set textwidth=120
 set colorcolumn=81
 set expandtab
 
@@ -78,5 +77,7 @@ map <c-n> :NERDTreeToggle<CR>
 nnoremap <leader>p :CtrlPTag<cr>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPBuffer'
+" let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_by_filename = 1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
