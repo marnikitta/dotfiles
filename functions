@@ -13,3 +13,7 @@ jdk-configure() {
 jdk-make() {
   make WARNINGS_ARE_ERRORS="-Wno-error" CFLAGS_WARNINGS_ARE_ERRORS="-Wno-error" all
 }
+
+function lb() {
+    vim ~/wiki/logbook/$(date '+%Y-%m-%d').md
+}
