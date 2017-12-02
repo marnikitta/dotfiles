@@ -15,5 +15,13 @@ jdk-make() {
 }
 
 function lb() {
-    vim ~/wiki/logbook/$(date '+%Y-%m-%d').md
+  vim ~/wiki/logbook/$(date '+%Y-%m-%d').md
+}
+
+function di() {
+  vim ~/wiki/diary/$(date '+%Y-%m-%d').md
+}
+
+function compdi() {
+  for file in $(ls ~/wiki/diary/*.md); do; echo "\n## $(basename $file)\n"; cat $file; done;
 }
