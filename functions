@@ -14,14 +14,27 @@ jdk-make() {
   make WARNINGS_ARE_ERRORS="-Wno-error" CFLAGS_WARNINGS_ARE_ERRORS="-Wno-error" all
 }
 
-function lb() {
-  vim ~/wiki/logbook/$(date '+%Y-%m-%d').md
+lb() {
+  create_datefile ~/wiki/logbook
 }
 
-function di() {
-  vim ~/wiki/diary/$(date '+%Y-%m-%d').md
+di() {
+  create_datefile ~/wiki/diary
 }
 
-function compdi() {
-  for file in $(ls ~/wiki/diary/*.md); do; echo "\n## $(basename $file)\n"; cat $file; done;
+create_datefile() {
+  local base=$1
+  local date=$(date '+%F')
+  local filename=${base}/${date}.md
+  if [[ ! -e "$filename" ]]; then
+    touch "$filename"
+    echo "# $date\n" > "$filename"
+  fi
+
+  vim "$filename"
+
+  # remove file if there are no additional lines
+  if [[ $(wc -l < "$filename") -eq 2 ]]; then
+    rm "$filename"
+  fi
 }
