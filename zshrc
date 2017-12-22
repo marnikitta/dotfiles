@@ -12,5 +12,9 @@ for item in $HOME/.{aliases,exports,functions}; do
 done
 unset item
 
+alpinist=~/Projects/pets/alpinist/functions.sh
+[ -f "$alpinist" ] && source "$alpinist"
+unset alpinist
+
 compdef g=git
 

@@ -13,28 +13,3 @@ jdk-configure() {
 jdk-make() {
   make WARNINGS_ARE_ERRORS="-Wno-error" CFLAGS_WARNINGS_ARE_ERRORS="-Wno-error" all
 }
-
-lb() {
-  create_datefile ~/wiki/logbook
-}
-
-di() {
-  create_datefile ~/wiki/diary
-}
-
-create_datefile() {
-  local base=$1
-  local date=$(date '+%F')
-  local filename=${base}/${date}.md
-  if [[ ! -e "$filename" ]]; then
-    touch "$filename"
-    echo "# $date\n" > "$filename"
-  fi
-
-  vim "$filename"
-
-  # remove file if there are no additional lines
-  if [[ $(wc -l < "$filename") -eq 2 ]]; then
-    rm "$filename"
-  fi
-}

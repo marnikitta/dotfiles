@@ -2,8 +2,9 @@
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export LANG=en_US.UTF-8
+export WIKI_BASE=~/wiki
 
-function add_to_path() {
+add_to_path() {
     [[ -d "$*" ]] && PATH="$*:$PATH"
 }
 
