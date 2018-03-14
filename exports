@@ -3,6 +3,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export LANG=en_US.UTF-8
 export WIKI_BASE=~/wiki
+export TOOLS_JAR=~/Projects/pets/alpinist/tool/target/alpinist-tool-1.0-SNAPSHOT.jar
 
 add_to_path() {
     [[ -d "$*" ]] && PATH="$*:$PATH"
