@@ -1,5 +1,5 @@
 decrypt() {
-  [[ -e $1 ]] && cat $1 | openssl aes-256-cbc -d | tar -xz || echo 'No such file'
+  [[ -e $1 ]] && cat $1 | openssl aes-256-cbc -md md5 | tar -xz || echo 'No such file'
 }
 
 encrypt() {

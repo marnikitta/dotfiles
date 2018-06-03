@@ -2,7 +2,7 @@ export DISABLE_AUTO_UPDATE="true"
 export ZSH=${HOME}/.oh-my-zsh
 export ZSH_THEME="bira"
 
-plugins=(git)
+plugins=(git terraform ansible)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -18,3 +18,7 @@ unset alpinist
 
 compdef g=git
 
+unsetopt autopushd
+unsetopt auto_pushd
+unsetopt pushd_ignore_dups
+unsetopt pushdminus
