@@ -1,9 +1,0 @@
-[core]
-  editor = vim
-[push]
-	default = simple
-[diff]
-  tool = vimdiff
-[user]
-	name = marnikitta
-	email = marnikitta@gmail.com

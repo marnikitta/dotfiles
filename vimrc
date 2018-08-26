@@ -45,28 +45,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" Look & feel
-
-" Colors
 syntax enable
-set background=dark
-colorscheme solarized
-
-" Status line
-set laststatus=2
-set statusline=
-set statusline+=%-3.3n\                    " Buffer number
-set statusline+=%f\                        " File name
-set statusline+=%h%m%r%w                   " Flags (help, modified, read-only, preview)
-set statusline+=\[                         " Opening bracket
-set statusline+=%{strlen(&ft)?&ft:'none'}, " File type
-set statusline+=%{&encoding},              " Encoding
-set statusline+=%{&fileformat}             " File format
-set statusline+=\]\                        " Closing bracket
-set statusline+=%=                         " Right align
-set statusline+=%b\ /\ 0x%04B              " Current character (decimal / hexadecimal)
-set statusline+=\ \ \ \                    " Padding
-set statusline+=%-14.(%l,%c%V%)\ %<%P      " Offset
 
 " PLUGINS CONFIGS
 
